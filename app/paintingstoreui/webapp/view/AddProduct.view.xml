@@ -1,0 +1,62 @@
+<mvc:View controllerName="paintingstoreui.controller.AddProduct"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core"
+   >
+    
+    <App id="addProduct">
+        <Page showHeader="false" class="sapUiSmallMargin">
+            <VBox  width="700px">
+                <form:SimpleForm title="Add New Painting" editable="true" layout="ResponsiveLayout" id="addproduct_form">
+                    
+                    <!-- Image URL -->
+                    <Label text="Image URL" labelFor="imageUrlInput" required="true"/>
+                    <Input placeholder="Enter image URL" id="imageUrlInput" name="image" change="onInputChange" fieldWidth="200px"  />
+
+                    <!-- Painting Name -->
+                    <Label text="Painting Name" labelFor="p_name" required="true"/>
+                    <Input id="p_name" 
+               placeholder="All characters allowed" 
+               name="product_name" 
+               change="onInputChange" 
+               required="true" 
+               maxLength="100" 
+               width="100%"   />
+
+                    <!-- Artist Name -->
+                    <Label text="Artist Name" labelFor="artistNameInput" required="true"/>
+                    <Input placeholder="Latin characters (case insensitive) and numbers" id="artistNameInput" name="artist_name" change="onInputChange"  />
+
+                    <!-- Rating -->
+                    <Label text="Rating (1 to 5)" labelFor="ratingP" required="true"/>
+                    <Input placeholder="Enter rating" id="ratingP" name="rating" change="onInputChange"   />
+
+                    <!-- Price -->
+                    <Label text="Price" labelFor="price" required="true"/>
+                    <Input placeholder="Enter price in numbers" id="price" name="price" change="onInputChange"   />
+
+                    <!-- Height -->
+                    <Label text="Height (mm)" labelFor="height" required="true"/>
+                    <Input placeholder="Enter height in mm" id="height" name="height" change="onInputChange"   />
+
+                    <!-- Depth -->
+                    <Label text="Depth (mm)" labelFor="depth" required="true"/>
+                    <Input placeholder="Enter depth in mm" id="depth" name="depth" change="onInputChange"  />
+
+                    <!-- Width -->
+                    <Label text="Width (mm)" labelFor="width" required="true"/>
+                    <Input placeholder="Enter width in mm" id="width" name="width" change="onInputChange"   />
+
+                    <!-- Description -->
+                    <Label text="Description" labelFor="descriptionInput" required="true"/>
+                    <TextArea placeholder="Enter description" id="descriptionInput" name="description" change="onInputChange"   rows="5" />
+
+                    <!-- Save Button -->
+                    <Button text="Save" press="onSave" type="Emphasized" width="100px" class="sapUiMediumMarginTop"/>
+   
+                </form:SimpleForm>
+            </VBox>
+        </Page>
+    </App>
+</mvc:View>

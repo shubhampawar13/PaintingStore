@@ -1,0 +1,1 @@
+using paintingStore as service from '../../srv/Service';
